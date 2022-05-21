@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="D:\WEB\yardenfelz\yardenfelz\static\mystyle2.css">
+    <script type= "text/javascript" src="D:\WEB\yardenfelz\yardenfelz\static\embroideryJS.js"></script> 
+</head>
+<body>
+    <!-- nav & header are the same in both pages -->
+    <header>
+        <span id="embroideryIcon"><i class="fa fa-etsy" aria-hidden="true"></i>mbr<i class="fa fa-ravelry" aria-hidden="true"></i>idery<em>4U</em></span>
+    </header>
+    <nav>
+            <ul id="navtool">
+                <li><a href="D:\WEB\yardenfelz\yardenfelz\templates\homePage22.html" id="navHome">Home<i class="fa fa-home"></i></a></li>
+                <li><a href="D:\WEB\yardenfelz\yardenfelz\templates\contactUs22.html" id="navContact">ContactUs<i class="fa fa-envelope"></i></a></li>
+            </ul>
+    </nav>
+    <aside  id="picDiv">
+        <!-- the animation -->
+        <div class="content" id="animationDiv">
+            <h3 class="fontDesign" id="animText">Choose Your Embroidery</h3>
+        </div>
+        <!-- the product picture -->
+        <div id="productDiv">
+            <img src="D:\WEB\yardenfelz\yardenfelz\static\catEmbroidery.jpg" alt="" id="productShow">
+        </div>
+    </aside>
+
+    <main id="detailsDiv">
+
+        <!--5 input types :text,email,tel, checkbox and select tag-->
+        <form action="" id="contactForm">
+                <!--  &bull symbolize point-->
+            <h2 class="fontDesign">&bull; Keep in Touch &bull;</h2>
+            <div class="inputDesign" >
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" autocomplete="on" required><br>
+            </div>
+
+            <div class="inputDesign" >
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="on" required><br>
+            </div>
+
+            <div class="inputDesign" >
+                <label for="telephone">Phone Number</label>
+                <input type="tel" id="telephone" name="telephone" autocomplete="on" required><br>
+            </div>
+
+            <div class="inputDesign" style="display: flex;">
+                <label for="listby">Choose Embroidery</label><br>
+                <!-- function that change the image depend on the option -->
+                <select name="listby" id="listby" name="listby" onchange="show_product()">
+                    <option value="cat" rel="D:\WEB\yardenfelz\yardenfelz\static\catEmbroidery.jpg">Cat</option>
+                    <option value="marbled" rel="D:\WEB\yardenfelz\yardenfelz\static\marbled Embroidery.jfif">Marbled</option>
+                    <option value="hands" rel="D:\WEB\yardenfelz\yardenfelz\static\handsEmbroidery.jpg">Hands</option>
+                    <option value="hedgehog" rel="D:\WEB\yardenfelz\yardenfelz\static\hedgehog.jpg">Hedgehog</option>
+                </select>
+            </div>
+
+            <div class="inputDesign" style="display: flex;margin-top: 5vh;">
+                <input type="checkbox" id="agree" name="agree">
+                <label for="agree" style="background: honeydew;">I Accept it may be delay with my shipping that will
+                     make my shipment arrive up to two weeks </label>
+            </div>
+            <div style="display: flex; justify-content: center; margin-top: 3vh;">
+                <input type="submit" value="Send" id="sendInput" style="background: honeydew;;">
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
+
