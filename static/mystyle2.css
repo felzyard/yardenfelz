@@ -31,6 +31,13 @@ body {
         'nav';
        
     }
+    #detailsDiv {
+      background-color: white;
+      grid-area:detailsDiv;
+      overflow-y:scroll;
+      grid-template-areas: 'theTitle theTitle ' 'theTitle Summary' 'Summary Summary';  
+      /* align-items: center;*/
+    }
     #mainPic{
         height: 50vh;
         width: 70vw;
@@ -50,17 +57,18 @@ body {
       }
       nav{
         z-index: 1;
-        margin-top: 2vh;
+        margin-top: 0px;
       }
       #Summary{
-        width: 80vw;
+        width: 100vw;
         height: 30vh;
         border:solid 5px;
         border-color: var(--brightGreen);
-        z-index: 1;
-        margin: 15vw;
+        /* margin: 15vw; */
         font-family: var( --parFont);
-        margin-bottom: 2vh;
+
+        
+
 
       }
       #animationDiv{
@@ -99,12 +107,15 @@ body {
        display: inline;
        padding-top: 0px;
        margin-top: 0px;
+       height: var(--nav_height);
    }
    nav li:hover{
     background-color: var(--brightPink);
    }
 
-
+   nav li a:hover{
+    background-color: var(--brightPink);
+   }
 
   /* the aside container in contactUs */
   #picDiv{
